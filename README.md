@@ -1,36 +1,136 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Solana Multi-Sender
 
-## Getting Started
+A powerful and user-friendly web application built with Next.js 15 that enables users to send SOL and SPL tokens to multiple recipients in a single transaction on the Solana blockchain.
 
-First, run the development server:
+![Solana Multi-Sender](https://img.shields.io/badge/Solana-Multi--Sender-9945FF?style=for-the-badge&logo=solana&logoColor=white)
 
-```bash
-npm run dev
+## 🌟 Features
+
+- **Multi-Recipient Transfers**: Send SOL or SPL tokens to multiple wallet addresses simultaneously
+- **Wallet Integration**: Seamless connection with Phantom and Solflare wallets
+- **Custom Token Support**: Add and send any SPL token by providing the token mint address
+- **Built-in Token Library**: Pre-loaded with popular SPL tokens for easy selection
+- **Transaction Tracking**: Direct links to view transactions on Solana Explorer and Solscan
+- **Devnet Support**: Connected to Solana Devnet for safe testing and development
+- **Responsive Design**: Beautiful, mobile-friendly interface built with Tailwind CSS
+- **Type Safety**: Full TypeScript implementation for better development experience
+
+## 🚀 Live Demo
+
+Visit the live application: [https://solana-transection.vercel.app/](https://solana-transection.vercel.app/)
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 15
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Blockchain**: Solana Web3.js
+- **Wallet Integration**: Solana Wallet Adapter
+- **Deployment**: Vercel
+
+## 📋 Prerequisites
+
+Before running this project, make sure you have:
+
+- Node.js 18+ installed
+- A Solana wallet (Phantom or Solflare) configured for Devnet
+- Devnet SOL tokens (get them from [Solana Faucet](https://solfaucet.com/))
+
+## ⚡ Getting Started
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/moazamtech/solana-multi-sender.git
+   cd solana-multi-sender
+
+Install dependencies
+bashnpm install
+# or
+yarn install
+# or
+pnpm install
+
+Set up environment variables
+bashcp .env.example .env.local
+Add your environment variables:
+envNEXT_PUBLIC_SOLANA_RPC_URL=https://api.devnet.solana.com
+NEXT_PUBLIC_SOLANA_NETWORK=devnet
+
+Run the development server
+bashnpm run dev
 # or
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open your browser
+Navigate to http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+🔧 How to Use
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Connect Wallet: Click the wallet connection button and select your preferred wallet (Phantom or Solflare)
+Select Token: Choose from the dropdown menu:
 
-## Learn More
+SOL (native Solana token)
+Pre-loaded SPL tokens
+Add custom SPL token by entering the mint address
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Add Recipients: Enter recipient wallet addresses and the amount to send to each
+Execute Transaction: Click "Send" to create and execute the multi-send transaction
+Track Transaction: View your transaction details on Solana Explorer or Solscan
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+📁 Project Structure
+solana-multi-sender/
+├── src/
+│   ├── app/
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+│   ├── components/
+│   │   ├── WalletAdapter.tsx
+│   │   ├── MultiSender.tsx
+│   │   └── TokenSelector.tsx
+│   ├── utils/
+│   │   ├── solana.ts
+│   │   └── tokens.ts
+│   └── types/
+│       └── index.ts
+├── public/
+├── package.json
+├── tailwind.config.js
+├── tsconfig.json
+└── next.config.js
+🔒 Security Features
 
-## Deploy on Vercel
+Devnet Only: Application is configured for Solana Devnet to prevent accidental mainnet transactions
+Wallet Verification: Transactions require wallet approval before execution
+Input Validation: All addresses and amounts are validated before processing
+Error Handling: Comprehensive error handling for failed transactions
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+🤝 Contributing
+Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Fork the project
+Create your feature branch (git checkout -b feature/AmazingFeature)
+Commit your changes (git commit -m 'Add some AmazingFeature')
+Push to the branch (git push origin feature/AmazingFeature)
+Open a Pull Request
+
+📝 License
+This project is open source and available under the MIT License.
+⚠️ Disclaimer
+This application is currently configured for Solana Devnet only. Do not use with mainnet tokens without proper testing and security audits. Always verify recipient addresses before sending transactions.
+🙏 Acknowledgments
+
+Solana Web3.js for blockchain interaction
+Solana Wallet Adapter for wallet integration
+Next.js for the amazing React framework
+Tailwind CSS for the utility-first CSS framework
+
+📞 Support
+If you have any questions or need help, please open an issue on GitHub or contact @moazamtech.
+
+Made with ❤️ by moazamtech
+
+This README file provides a comprehensive overview of your Solana multi-sender project, including features, setup instructions, usage guide, and contribution guidelines. It's structured to help other developers understand and contribute to your open-source project effectively.
