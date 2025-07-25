@@ -80,7 +80,7 @@ Add Recipients: Enter recipient wallet addresses and the amount to send to each
 Execute Transaction: Click "Send" to create and execute the multi-send transaction
 Track Transaction: View your transaction details on Solana Explorer or Solscan
 
-📁 Project Structure
+
 solana-multi-sender/
 ├── src/
 │   ├── app/
@@ -101,6 +101,7 @@ solana-multi-sender/
 ├── tailwind.config.js
 ├── tsconfig.json
 └── next.config.js
+
 🔒 Security Features
 
 Devnet Only: Application is configured for Solana Devnet to prevent accidental mainnet transactions
