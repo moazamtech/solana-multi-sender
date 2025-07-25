@@ -43,25 +43,14 @@ Before running this project, make sure you have:
    git clone https://github.com/moazamtech/solana-multi-sender.git
    cd solana-multi-sender
 
-Install dependencies
-bashnpm install
-# or
-yarn install
-# or
-pnpm install
+2.   pnpm install
+3.   pnpm run dev
 
 Set up environment variables
 bashcp .env.example .env.local
 Add your environment variables:
 envNEXT_PUBLIC_SOLANA_RPC_URL=https://api.devnet.solana.com
 NEXT_PUBLIC_SOLANA_NETWORK=devnet
-
-Run the development server
-bashnpm run dev
-# or
-yarn dev
-# or
-pnpm dev
 
 Open your browser
 Navigate to http://localhost:3000
@@ -79,28 +68,6 @@ Add custom SPL token by entering the mint address
 Add Recipients: Enter recipient wallet addresses and the amount to send to each
 Execute Transaction: Click "Send" to create and execute the multi-send transaction
 Track Transaction: View your transaction details on Solana Explorer or Solscan
-
-
-solana-multi-sender/
-├── src/
-│   ├── app/
-│   │   ├── globals.css
-│   │   ├── layout.tsx
-│   │   └── page.tsx
-│   ├── components/
-│   │   ├── WalletAdapter.tsx
-│   │   ├── MultiSender.tsx
-│   │   └── TokenSelector.tsx
-│   ├── utils/
-│   │   ├── solana.ts
-│   │   └── tokens.ts
-│   └── types/
-│       └── index.ts
-├── public/
-├── package.json
-├── tailwind.config.js
-├── tsconfig.json
-└── next.config.js
 
 🔒 Security Features
 
@@ -133,5 +100,3 @@ Tailwind CSS for the utility-first CSS framework
 If you have any questions or need help, please open an issue on GitHub or contact @moazamtech.
 
 Made with ❤️ by moazamtech
-
-This README file provides a comprehensive overview of your Solana multi-sender project, including features, setup instructions, usage guide, and contribution guidelines. It's structured to help other developers understand and contribute to your open-source project effectively.
